@@ -6,7 +6,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Registrar Cliente</title>
-    {{-- <script src="https://cdn.tailwindcss.com"></script> <!-- CDN solo para test --> --}}
 </head>
 <body class="bg-gray-100 min-h-screen flex items-center justify-center">
     <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">

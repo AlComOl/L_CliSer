@@ -50,6 +50,8 @@ Route::delete('/clientes/{id}', [ClienteController::class, 'borrar'])->name('cli
 
 //Ruta para ver mostrar los clientes de ese servicio
 Route::get('/mostrarClientes/{id}', [ServicioController::class, 'mostrarClientes'])->name('mostrarClientes');
+//Ruta para ver los clientes de cada servicio
+Route::get('/servicios/clientes', [ServicioController::class, 'mostrarClientes'])->name('servicios.clientes');
 
 
 

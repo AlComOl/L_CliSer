@@ -1,3 +1,4 @@
+
 <div style="text-align: center;">
     <h2>SERVICIOS REGISTRADOS</h2>
 </div>
@@ -15,12 +16,15 @@
                     <p style="margin: 0;"><strong>Código:</strong> {{ $servicio->codigo }}</p>
                 </div>
 
-                <div>
-                  <a  style="padding: 10px;background-color:blue; color:black" href="accion()" >Mostrar</a>
-                </div>
+
+                 <form method="GET" action="{{route('servicios.clientes')}}">
+                    <input type="hidden" name="servicio_id" value="{{$servicio->id}}">
+                        <button type="submit" style="padding:10px; background-color:blue; color:black;">Mostrar</button>
+                 </form>
             </li>
         @empty
-            <li style="padding: 10px; text-align: center; color: #666;">No hay servicios disponibles.</li>
+        <li style="padding: 10px; text-align: center; color: #666;">No hay servicios disponibles.</li>
+
         @endforelse
     </ul>
 </div>

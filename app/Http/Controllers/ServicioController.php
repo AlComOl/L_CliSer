@@ -15,5 +15,13 @@ class ServicioController extends Controller
          return view('clientes.servicio', ['servicios' => $servicios]);
     }
 
-   
+   public function mostrarClientes(Request $request){
+     $id = $request->get('servicio_id'); // ✅ ahora sí tienes el id que viene del input hidden
+
+        $servicio = Servicio::findOrFail($id);
+        $clientes = $servicio->clientes;
+        return view('clientes.clientes', ['clientes' => $clientes]);
+
+
+   }
 }
