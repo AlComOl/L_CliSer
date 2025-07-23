@@ -22,7 +22,8 @@
                   focus:outline-none focus:underline px-7 ">
             {{ __('MOSTRAR SERVICIOS') }}
         </a>
-         <a href="{{ route('clientes.servicio')}}"
+         <a href="{{ route('servicios.create')}}"
+
               class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight
                   hover:text-blue-600 dark:hover:text-blue-400 transition duration-150 ease-in-out
                   focus:outline-none focus:underline px-7 ">

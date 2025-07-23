@@ -25,6 +25,7 @@ Route::middleware('auth')->group(function () {
 });
 
 
+
 //Para que solo pueda registrarse si es usuario es admin
 // 1. Ruta para mostrar el formulario de registro de clientes (GET)
 //  Route::get('/registroCliente', [ClienteController::class, 'create'])->name('clientes.create');
@@ -52,7 +53,10 @@ Route::delete('/clientes/{id}', [ClienteController::class, 'borrar'])->name('cli
 Route::get('/mostrarClientes/{id}', [ServicioController::class, 'mostrarClientes'])->name('mostrarClientes');
 //Ruta para ver los clientes de cada servicio
 Route::get('/servicios/clientes', [ServicioController::class, 'mostrarClientes'])->name('servicios.clientes');
-
+//Ruta para llavarte a la vista donde esta el formulario enlaza la <a> de dahboard con el formulario en clientes/createServicio
+Route::get('/addServicios', [ServicioController::class, 'ShowForm']) ->name('servicios.create');
+//Ruta para enviar el formulario (guardarlo en la base de datos)
+Route::post('/addServicios', [ServicioController::class, 'store']) ->name('servicios.store');
 
 
 require __DIR__.'/auth.php';
